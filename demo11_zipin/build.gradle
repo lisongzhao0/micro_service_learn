@@ -33,9 +33,8 @@ ext {
 
 dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-eureka')
-    compile('org.springframework.cloud:spring-cloud-starter-zuul')
-    compile('org.springframework.cloud:spring-cloud-starter-zipkin')
-    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('io.zipkin.java:zipkin-server')
+    compile('io.zipkin.java:zipkin-autoconfigure-ui')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

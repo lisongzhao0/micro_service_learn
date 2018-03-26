@@ -5,6 +5,13 @@ server:
 spring:
   application:
     name: micro-service-05-zuul-router
+##(Zipkin 链路跟踪 start)
+  sleuth:
+    sampler:
+      percentage: 1.0
+  zipkin:
+    base-url: http://localhost:8771
+##(Zipkin 链路跟踪 end)
 
 eureka:
   client:
@@ -19,3 +26,6 @@ zuul:
     api-b:
       path: /api-b/**
       serviceId: micro-service-05-forein
+    api-c:
+      path: /zipkin-c/**
+      serviceId: zipkin-user-service
